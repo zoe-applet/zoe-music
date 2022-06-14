@@ -1,7 +1,11 @@
+/*
+ * @Date: 2022-05-06 11:38:16
+ * @Description: 
+ */
 const getAccessToken = require('./getAccessToken.js')
 const rp = require('request-promise')
 
-const callCloudDB = async(ctx, fnName, query = {}) => {
+const callCloudDB = async (ctx, fnName, query = {}) => {
     const ACCESS_TOKEN = await getAccessToken()
     const options = {
         method: 'POST',
